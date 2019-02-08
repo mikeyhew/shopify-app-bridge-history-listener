@@ -1,0 +1,30 @@
+{
+  "name": "shopify-app-bridge-history-listener",
+  "version": "0.0.1",
+  "description": "A History.LocationListener that updates the parent window's location in a Shopify embedded app",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": "https://github.com/mikeyhew/shopify-app-bridge-history-listener",
+  "author": "Michael Hewson",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@shopify/app-bridge": "^1.0.7",
+    "@types/history": "^4.7.2",
+    "history": "^4.7.2",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3",
+    "typescript-tslint-plugin": "^0.3.1"
+  },
+  "peerDependencies": {
+    "@shopify/app-bridge": "^1.0.7",
+    "@types/history": "^4.7.2",
+    "history": "^4.7.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn lint"
+  }
+}
